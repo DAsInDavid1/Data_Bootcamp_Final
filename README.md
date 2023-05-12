@@ -1,1 +1,3 @@
 # Data_Bootcamp_Final
+## Communication Protocols
+To ensure effective communication within our team, we have established the following protocols. We will primarily use Slack for all day-to-day communications and updates related to the project. Additionally, we will hold weekly meetings on Sundays to discuss progress, address any issues, and plan for the upcoming week. During these meetings, we will review individual and collective goals and ensure everyone is on the same page. We believe that these communication protocols will help us stay organized, track our progress, and complete the project successfully.
