@@ -11,6 +11,9 @@ We selected this data to gain a better understanding of the factors that contrib
 
 The Framingham Heart Study dataset consists of 4,240 records with 15 attributes, including demographic information such as gender, age, education, smoking behavior, medical history including blood pressure medication, stroke, hypertension, and diabetes, as well as clinical measurements such as cholesterol levels, BMI, heart rate, and glucose levels. This dataset aims to predict the 10-year risk of developing coronary heart disease (CHD) based on the available data.
 
+### Question we hope to answer with the data
+
+Can demographic information such as age, gender, education, and health-related data such as smoking status, blood pressure, and cholesterol levels be used to predict the likelihood of developing coronary heart disease (CHD) in the next ten years?
 
 
 ### Communication Protocols
