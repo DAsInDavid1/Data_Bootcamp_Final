@@ -5,7 +5,7 @@ Predicting the 10-year risk of future coronary heart disease (CHD) using demogra
 
 ### Reason for selecting this topic
 
-We selected this data to gain a better understanding of the factors that contribute to the development of coronary heart disease and to explore the potential of using machine learning algorithms to predict the likelihood of a patient developing CHD in the next 10 years based on their health information.
+We decided to choose a healthcare-related topic because of its potential in the job market for data scientists and because we thought other teams were not planning to choose this area. After considering several other possible data sources, such as Hospital ratings, Drug Classification, Drug Use By Age, and Health Insurance Marketplace, we ruled those out due to the small sample size or absence of endpoint data for model testing. We ultimately selected data related to coronary heart disease (CHD) in order to gain a better understanding of the factors that contribute to its development. Our goal is to explore the potential of using machine learning algorithms to predict the likelihood of a patient developing CHD in the next ten years based on their health information.
 
 ### Description of the source data
 
