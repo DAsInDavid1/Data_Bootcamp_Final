@@ -13,7 +13,7 @@ The Framingham Heart Study dataset consists of 4,240 records with 15 attributes,
 
 ### Question we hope to answer with the data
 
-Can demographic information such as age, gender, education, and health-related data such as smoking status, blood pressure, and cholesterol levels be used to predict the likelihood of developing coronary heart disease (CHD) in the next ten years?
+Can demographic information such as age, gender, and health-related data such as smoking status, blood pressure, and cholesterol levels be used to predict the likelihood of developing coronary heart disease (CHD) in the next ten years?
 
 
 ### Communication Protocols
