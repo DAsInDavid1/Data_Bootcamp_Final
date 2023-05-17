@@ -21,3 +21,5 @@ To ensure effective communication within our team, we have established the follo
 
 ### Data Exploration and Preparation
 We split the data into three tables. One containing categorical variables with characteristics of the patients (DEMOG), continuous measures (MEASURES), and categorical variables of medical history/symptoms (COMORBIDITIES). We started the data exploration with the DEMOG data. 53 rows (patients) of the 4240 rows in the raw data had BPMeds=NA and 50 rows had TotChol=NA. We dropped those rows from the analysis data, leaving 4138 rows for analysis. We decided not to use Education and Glucose in the analysis because of the large percentage of missing values. After dropping the rows with BMI or heartrate =NA, that left 4119 rows for analysis. The only other variable that needed to be addressed for missing data was cigsperday. For currentsmoker=1(Yes), we replaced 29 NAs with the mean value 18.
+
+![ERD Schema](/Resources/ERD.png)
