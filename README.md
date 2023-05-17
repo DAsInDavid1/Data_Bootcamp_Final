@@ -27,5 +27,10 @@ We split the data into three tables. One containing categorical variables with c
 ### Machine Learning
 We are using a basic gradient boosting classifer method to see which learning rate we can expect the best results from. As seen in the picture below, we have the highes validation accuracy score at 0.1 learning rate. Even thought the higher training levels have a higher training accuracry score, it is getting to seperated from the validation accuarcy score. This is most likely caused by over fitting and we have decided to go with 0.1 since it has the closes training and validation accuracy scores, implying that this learning rate is not overfitted.
 
+<img src= "https://github.com/DAsInDavid1/Data_Bootcamp_Final/blob/Machine-Learning-Model-Updating/Pictures/Learning_rates.png" width=25% height=25%> 
 
 However, as seen with the confusion matrix we have a relitivly high False Negatives causing us to have a low recall (sensitivity) rate. And when concerning coronary heart disease, it is extremly important to have a good sensitivity rate. We will need to look into raising our sensitivy rate to an acceptable standard.
+
+| Confusion Matrix  | Classification Report 
+| ------------- | ------------- 
+| <img src= "https://github.com/DAsInDavid1/Data_Bootcamp_Final/blob/Machine-Learning-Model-Updating/Pictures/Confusion_Matrix_1.png" width=100% height=100%>   | <img src= "https://github.com/DAsInDavid1/Data_Bootcamp_Final/blob/Machine-Learning-Model-Updating/Pictures/Classification_report_1.png" width=100% height=100%>   
