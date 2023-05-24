@@ -23,3 +23,14 @@ To ensure effective communication within our team, we have established the follo
 We split the data into three tables. One containing categorical variables with characteristics of the patients (DEMOG), continuous measures (MEASURES), and categorical variables of medical history/symptoms (COMORBIDITIES). We started the data exploration with the DEMOG data. 53 rows (patients) of the 4240 rows in the raw data had BPMeds=NA and 50 rows had TotChol=NA. We dropped those rows from the analysis data, leaving 4138 rows for analysis. We decided not to use Education and Glucose in the analysis because of the large percentage of missing values. After dropping the rows with BMI or heartrate =NA, that left 4119 rows for analysis. The only other variable that needed to be addressed for missing data was cigsperday. For currentsmoker=1(Yes), we replaced 29 NAs with the mean value 18.
 
 ![ERD Schema](/Resources/ERD.png)
+
+### Machine Learning
+We are using a basic gradient boosting classifer method to see which learning rate we can expect the best results from. As seen in the picture below, we have the highes validation accuracy score at 0.1 learning rate. Even thought the higher training levels have a higher training accuracry score, it is getting to seperated from the validation accuarcy score. This is most likely caused by over fitting and we have decided to go with 0.1 since it has the closes training and validation accuracy scores, implying that this learning rate is not overfitted.
+
+<img src= "https://github.com/DAsInDavid1/Data_Bootcamp_Final/blob/Machine-Learning-Model-Updating/Pictures/Learning_rates.png" width=25% height=25%> 
+
+However, as seen with the confusion matrix we have a relitivly high False Negatives causing us to have a low recall (sensitivity) rate. And when concerning coronary heart disease, it is extremly important to have a good sensitivity rate. We will need to look into raising our sensitivy rate to an acceptable standard.
+
+| Confusion Matrix  | Classification Report 
+| ------------- | ------------- 
+| <img src= "https://github.com/DAsInDavid1/Data_Bootcamp_Final/blob/Machine-Learning-Model-Updating/Pictures/Confusion_Matrix_1.png" width=100% height=100%>   | <img src= "https://github.com/DAsInDavid1/Data_Bootcamp_Final/blob/Machine-Learning-Model-Updating/Pictures/Classification_report_1.png" width=100% height=100%>   
