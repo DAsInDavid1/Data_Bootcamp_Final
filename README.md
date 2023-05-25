@@ -40,6 +40,17 @@ However, as seen with the confusion matrix we have a relitivly high False Negati
 #### Secondary Phase, Choosing a Best Model
 After getting the framework for a machine learning model into place, we tested 3 more differnt models to see which one would give us the best base score we were looking for. The condition was a higher sensititivy score, along with a resonable accuracy score of somwhere above 60%.
 
-| Gradient Boosting Classifier  | Decision Tree | Logistical Regression | K-Nearest Neighbors
-| ------------- | ------------- | ------------- | -------------   
-| <img src= "https://github.com/DAsInDavid1/Data_Bootcamp_Final/blob/Machine-Learning-Model-Updating/Pictures/Confusion_Matrix_1.png" width=100% height=100%>   | <img src= "https://github.com/DAsInDavid1/Data_Bootcamp_Final/blob/Machine-Learning-Model-Updating/Pictures/Classification_report_1.png" width=100% height=100%>   
+| Gradient Boosting Classifier  | Decision Tree 
+| ------------- | -------------    
+| <img src= "https://github.com/DAsInDavid1/Data_Bootcamp_Final/blob/Machine-Learning-Model-Updating/Pictures/Classification_report_1.png" width=120% height=120%>   | <img src= "https://github.com/DAsInDavid1/Data_Bootcamp_Final/blob/Machine_Learning_ReadMe_Update/Pictures/Decision_Tree_Clasfication_Report.png" width=105% height=105%>    
+
+| Logistical Regression | K-Nearest Neighbors
+| ------------- | ------------- 
+| <img src= "https://github.com/DAsInDavid1/Data_Bootcamp_Final/blob/Machine_Learning_ReadMe_Update/Pictures/Logistical_Regression_Clasfication_Report.png" width=100% height=100%>  | <img src= "https://github.com/DAsInDavid1/Data_Bootcamp_Final/blob/Machine_Learning_ReadMe_Update/Pictures/KNN_Clasfication_Report.png" width=100% height=100%>  
+
+As seen in the pictures above, the highest accuracy was the logistical regression, however it still had an extremly low recall rate for 1 (the patient will have a heart disease. The decision tree was better with still a high accuracy score, but we felt the recall rate was still to low to work with.
+
+The best over all was the KNN model which had a much higher sensitivity then all the others, and was still above 60% accuracy over all. We decided to move forward with this model and try to increase the quality of our machine learning model using other techniques.
+
+The first technique we looked into was SMOTEENN, which allowed us to oversample the 1's and then get rid of the outliers and any that overlapped with the 0's. This gave us a much more even analysis and kept it from being scewed to one side.
+
