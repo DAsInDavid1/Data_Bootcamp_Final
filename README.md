@@ -27,18 +27,18 @@ We split the data into three tables. One containing categorical variables with c
 ### Machine Learning
 
 #### Initial Machine Learning Phase
-We are using a basic gradient boosting classifer method to see which learning rate we can expect the best results from. As seen in the picture below, we have the highes validation accuracy score at 0.1 learning rate. Even thought the higher training levels have a higher training accuracry score, it is getting to seperated from the validation accuarcy score. This is most likely caused by over fitting and we have decided to go with 0.1 since it has the closes training and validation accuracy scores, implying that this learning rate is not overfitted.
+We are using a basic gradient boosting classifer method to see which learning rate we can expect the best results from. As seen in the picture below, we have the highes validation accuracy score at 0.1 learning rate. Even though the higher training levels have a higher training accuracry score, it is getting to seperated from the validation accuracy score. This is most likely caused by over fitting and we have decided to go with 0.1 since it has the closest training and validation accuracy scores, implying that this learning rate is not overfitted.
 
 <img src= "https://github.com/DAsInDavid1/Data_Bootcamp_Final/blob/Machine-Learning-Model-Updating/Pictures/Learning_rates.png" width=25% height=25%> 
 
-However, as seen with the confusion matrix we have a relitivly high False Negatives causing us to have a low recall (sensitivity) rate. And when concerning coronary heart disease, it is extremly important to have a good sensitivity rate. We will need to look into raising our sensitivy rate to an acceptable standard.
+However, as seen with the confusion matrix we have a relatively high False Negatives causing us to have a low recall (sensitivity) rate. And when concerning coronary heart disease, it is extremely important to have a good sensitivity rate. We will need to look into raising our sensitivity rate to an acceptable standard.
 
 | Confusion Matrix  | Classification Report 
 | ------------- | ------------- 
 | <img src= "https://github.com/DAsInDavid1/Data_Bootcamp_Final/blob/Machine-Learning-Model-Updating/Pictures/Confusion_Matrix_1.png" width=100% height=100%>   | <img src= "https://github.com/DAsInDavid1/Data_Bootcamp_Final/blob/Machine-Learning-Model-Updating/Pictures/Classification_report_1.png" width=100% height=100%>   
 
 #### Secondary Phase, Choosing a Best Model
-After getting the framework for a machine learning model into place, we tested 3 more differnt models to see which one would give us the best base score we were looking for. The condition was a higher sensititivy score, along with a resonable accuracy score of somwhere above 60%.
+After getting the framework for a machine learning model into place, we tested 3 more different models to see which one would give us the best base score we were looking for. The condition was a higher sensititivy score, along with a reasonable accuracy score of somewhere above 60%.
 
 | Gradient Boosting Classifier  | Decision Tree 
 | ------------- | -------------    
@@ -48,7 +48,7 @@ After getting the framework for a machine learning model into place, we tested 3
 | ------------- | ------------- 
 | <img src= "https://github.com/DAsInDavid1/Data_Bootcamp_Final/blob/Machine_Learning_ReadMe_Update/Pictures/Logistical_Regression_Clasfication_Report.png" width=130% height=130%>  | <img src= "https://github.com/DAsInDavid1/Data_Bootcamp_Final/blob/Machine_Learning_ReadMe_Update/Pictures/KNN_Classification_Report.png" width=100% height=100%>  
 
-As seen in the pictures above, the highest accuracy was the logistical regression, however it still had an extremly low recall rate for 1 (the patient will have a heart disease). The decision tree was better with still a high accuracy score, but the KNN Model had a better recall and accuracy score overall. We decided to move forward with this model and try to increase the quality of our machine learning model using other techniques.
+As seen in the pictures above, the highest accuracy was the logistical regression, however it still had an extremely low recall rate for 1 (the patient will have a heart disease). The decision tree was better with still a high accuracy score, but the KNN Model had a better recall and accuracy score overall. We decided to move forward with this model and try to increase the quality of our machine learning model using other techniques.
 
 The first technique we looked into was SMOTEENN, which allowed us to oversample the 1's and then get rid of the outliers and any that overlapped with the 0's. This gave us a much more even analysis and kept it from being scewed to one side.
 
