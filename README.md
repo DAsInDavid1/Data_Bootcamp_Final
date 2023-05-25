@@ -22,15 +22,43 @@ To ensure effective communication within our team, we have established the follo
 ### Data Exploration and Preparation
 We split the data into three tables. One containing categorical variables with characteristics of the patients (DEMOG), continuous measures (MEASURES), and categorical variables of medical history/symptoms (COMORBIDITIES). We started the data exploration with the DEMOG data. 53 rows (patients) of the 4240 rows in the raw data had BPMeds=NA and 50 rows had TotChol=NA. We dropped those rows from the analysis data, leaving 4138 rows for analysis. We decided not to use Education and Glucose in the analysis because of the large percentage of missing values. After dropping the rows with BMI or heartrate =NA, that left 4119 rows for analysis. The only other variable that needed to be addressed for missing data was cigsperday. For currentsmoker=1(Yes), we replaced 29 NAs with the mean value 18.
 
-![ERD Schema](/Resources/ERD.png)
+![ERD Schema](/Resources/ERD/ERD.png)
 
 ### Machine Learning
-We are using a basic gradient boosting classifer method to see which learning rate we can expect the best results from. As seen in the picture below, we have the highes validation accuracy score at 0.1 learning rate. Even thought the higher training levels have a higher training accuracry score, it is getting to seperated from the validation accuarcy score. This is most likely caused by over fitting and we have decided to go with 0.1 since it has the closes training and validation accuracy scores, implying that this learning rate is not overfitted.
+
+#### Initial Machine Learning Phase
+We are using a basic gradient boosting classifer method to see which learning rate we can expect the best results from. As seen in the picture below, we have the highes validation accuracy score at 0.1 learning rate. Even though the higher training levels have a higher training accuracry score, it is getting to seperated from the validation accuracy score. This is most likely caused by over fitting and we have decided to go with 0.1 since it has the closest training and validation accuracy scores, implying that this learning rate is not overfitted.
 
 <img src= "https://github.com/DAsInDavid1/Data_Bootcamp_Final/blob/Machine-Learning-Model-Updating/Pictures/Learning_rates.png" width=25% height=25%> 
 
-However, as seen with the confusion matrix we have a relitivly high False Negatives causing us to have a low recall (sensitivity) rate. And when concerning coronary heart disease, it is extremly important to have a good sensitivity rate. We will need to look into raising our sensitivy rate to an acceptable standard.
+However, as seen with the confusion matrix we have a relatively high False Negatives causing us to have a low recall (sensitivity) rate. And when concerning coronary heart disease, it is extremely important to have a good sensitivity rate. We will need to look into raising our sensitivity rate to an acceptable standard.
 
 | Confusion Matrix  | Classification Report 
 | ------------- | ------------- 
 | <img src= "https://github.com/DAsInDavid1/Data_Bootcamp_Final/blob/Machine-Learning-Model-Updating/Pictures/Confusion_Matrix_1.png" width=100% height=100%>   | <img src= "https://github.com/DAsInDavid1/Data_Bootcamp_Final/blob/Machine-Learning-Model-Updating/Pictures/Classification_report_1.png" width=100% height=100%>   
+
+#### Secondary Phase, Choosing a Best Model
+After getting the framework for a machine learning model into place, we tested 3 more different models to see which one would give us the best base score we were looking for. The condition was a higher sensititivy score, along with a reasonable accuracy score of somewhere above 60%.
+
+| Gradient Boosting Classifier  | Decision Tree 
+| ------------- | -------------    
+| <img src= "https://github.com/DAsInDavid1/Data_Bootcamp_Final/blob/Machine-Learning-Model-Updating/Pictures/Classification_report_1.png" width=120% height=120%>   | <img src= "https://github.com/DAsInDavid1/Data_Bootcamp_Final/blob/Machine_Learning_ReadMe_Update/Pictures/Decision_Tree_Clasfication_Report.png" width=100% height=100%>    
+
+| Logistical Regression | K-Nearest Neighbors
+| ------------- | ------------- 
+| <img src= "https://github.com/DAsInDavid1/Data_Bootcamp_Final/blob/Machine_Learning_ReadMe_Update/Pictures/Logistical_Regression_Clasfication_Report.png" width=130% height=130%>  | <img src= "https://github.com/DAsInDavid1/Data_Bootcamp_Final/blob/Machine_Learning_ReadMe_Update/Pictures/KNN_Classification_Report.png" width=100% height=100%>  
+
+As seen in the pictures above, the highest accuracy was the logistical regression, however it still had an extremely low recall rate for 1 (the patient will have a heart disease). The decision tree was better with still a high accuracy score, but the KNN Model had a better recall and accuracy score overall. We decided to move forward with this model and try to increase the quality of our machine learning model using other techniques.
+
+The first technique we looked into was SMOTEENN, which allowed us to oversample the 1's and then get rid of the outliers and any that overlapped with the 0's. This gave us a much more even analysis and kept it from being scewed to one side.
+
+With SMOTEENN, our new accuracy score was lowered, however, we belive it was worth it to get our sensitivity rate up for 1's.
+
+We moved on to looking to alter our columns to see if we can increase our scores by dropping certain columns. After testing of dropping individual columns, we found that by dropping the "heartrate" column we were able to increase our scores in every category. We tested dropping other columns with "heartrate" and found that "diabetes" also had a positive impact on our machine learning model once it was dropped.
+
+| KNN & SMOTEENN | Dropping "heartrate" | Dropping "heartrate" and "diabetes"
+| ------------- | ------------- | -------------
+| <img src= "https://github.com/DAsInDavid1/Data_Bootcamp_Final/blob/Machine_Learning_ReadMe_Update/Pictures/KNN_Classification_Report_SMOTEENN.png" width=90% height=90%> | <img src= "https://github.com/DAsInDavid1/Data_Bootcamp_Final/blob/Machine_Learning_ReadMe_Update/Pictures/KNN_Classification_Report_SMOTEENN_HeartRate.png" width=100% height=100%> | <img src= "https://github.com/DAsInDavid1/Data_Bootcamp_Final/blob/Machine_Learning_ReadMe_Update/Pictures/KNN_Classification_Report_SMOTEENN_HeartRate_Diabetes.png" width=900% height=90%>
+
+As seen we have made continuous improvements to the model and hope to have it above 70% accuracy with a recall rate of above 65% weighted avg by the end.
+
