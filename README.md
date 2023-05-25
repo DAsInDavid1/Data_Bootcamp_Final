@@ -34,3 +34,8 @@ However, as seen with the confusion matrix we have a relitivly high False Negati
 | Confusion Matrix  | Classification Report 
 | ------------- | ------------- 
 | <img src= "https://github.com/DAsInDavid1/Data_Bootcamp_Final/blob/Machine-Learning-Model-Updating/Pictures/Confusion_Matrix_1.png" width=100% height=100%>   | <img src= "https://github.com/DAsInDavid1/Data_Bootcamp_Final/blob/Machine-Learning-Model-Updating/Pictures/Classification_report_1.png" width=100% height=100%>   
+
+
+###
+
+Tableau dashboard link: https://public.tableau.com/app/profile/armando.molina/viz/FinalProject_16848673704810/Story1?publish=yes
