@@ -52,3 +52,10 @@ As seen in the pictures above, the highest accuracy was the logistical regressio
 
 The first technique we looked into was SMOTEENN, which allowed us to oversample the 1's and then get rid of the outliers and any that overlapped with the 0's. This gave us a much more even analysis and kept it from being scewed to one side.
 
+With SMOTEENN, our new accuracy score was lowered, however, we belive it was worth it to get our sensitivity rate up for 1's.
+| KNN & SMOTEENN
+| -------------
+| <img src= "https://github.com/DAsInDavid1/Data_Bootcamp_Final/blob/Machine_Learning_ReadMe_Update/Pictures/KNN_Classification_Report_SMOTEENN.png" width=100% height=100%> 
+
+We moved on to looking to alter our columns to see if we can increase our scores by dropping certain columns. After testing of dropping individual columns, we found that by dropping the "heartrate" column we were able to increase our scores in every category.
+
