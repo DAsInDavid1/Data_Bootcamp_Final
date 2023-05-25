@@ -46,7 +46,7 @@ After getting the framework for a machine learning model into place, we tested 3
 
 | Logistical Regression | K-Nearest Neighbors
 | ------------- | ------------- 
-| <img src= "https://github.com/DAsInDavid1/Data_Bootcamp_Final/blob/Machine_Learning_ReadMe_Update/Pictures/Logistical_Regression_Clasfication_Report.png" width=100% height=100%>  | <img src= "https://github.com/DAsInDavid1/Data_Bootcamp_Final/blob/Machine_Learning_ReadMe_Update/Pictures/KNN_Clasfication_Report.png" width=100% height=100%>  
+| <img src= "https://github.com/DAsInDavid1/Data_Bootcamp_Final/blob/Machine_Learning_ReadMe_Update/Pictures/Logistical_Regression_Clasfication_Report.png" width=100% height=100%>  | <img src= "https://github.com/DAsInDavid1/Data_Bootcamp_Final/blob/Machine_Learning_ReadMe_Update/Pictures/KNN_Classification_Report.png" width=100% height=100%>  
 
 As seen in the pictures above, the highest accuracy was the logistical regression, however it still had an extremly low recall rate for 1 (the patient will have a heart disease. The decision tree was better with still a high accuracy score, but we felt the recall rate was still to low to work with.
 
