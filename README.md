@@ -58,7 +58,7 @@ We moved on to looking to alter our columns to see if we can increase our scores
 
 | KNN & SMOTEENN | Dropping "heartrate" | Dropping "heartrate" and "diabetes"
 | ------------- | ------------- | -------------
-| <img src= "https://github.com/DAsInDavid1/Data_Bootcamp_Final/main/Pictures/KNN_Classification_Report_SMOTEENN.png" width=90% height=90%> | <img src= "https://github.com/DAsInDavid1/Data_Bootcamp_Final/main/Pictures/KNN_Classification_Report_SMOTEENN_HeartRate.png" width=100% height=100%> | <img src= "https://github.com/DAsInDavid1/Data_Bootcamp_Final/main/Pictures/KNN_Classification_Report_SMOTEENN_HeartRate_Diabetes.png" width=900% height=90%>
+| <img src= "https://github.com/DAsInDavid1/Data_Bootcamp_Final/blob/main/Pictures/KNN_Classification_Report_SMOTEENN.png" width=90% height=90%> | <img src= "https://github.com/DAsInDavid1/Data_Bootcamp_Final/blob/main/Pictures/KNN_Classification_Report_SMOTEENN_HeartRate.png" width=100% height=100%> | <img src= "https://github.com/DAsInDavid1/Data_Bootcamp_Final/blob/main/Pictures/KNN_Classification_Report_SMOTEENN_HeartRate_Diabetes.png" width=900% height=90%>
 
 As seen we have made continuous improvements to the model and hope to have it above 70% accuracy with a recall rate of above 65% weighted avg by the end.
 
