@@ -64,5 +64,5 @@ As seen we have made continuous improvements to the model and hope to have it ab
 
 ### Tableau Dashboard
 
-https://public.tableau.com/app/profile/armando.molina/viz/FinalProject_16848673704810/Story1?publish=yes
+https://public.tableau.com/app/profile/armando.molina/viz/FinalProject_16848673704810/Dashboard2
 
