@@ -66,3 +66,7 @@ As seen we have made continuous improvements to the model and hope to have it ab
 
 https://public.tableau.com/app/profile/armando.molina/viz/FinalProject_16848673704810/Dashboard2
 
+### Presentation
+
+https://docs.google.com/presentation/d/1yOMohdrSi0T8136BjUfX5RQ0WgP055Mjka2hBdSLjH8/edit?usp=sharing
+
