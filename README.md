@@ -62,3 +62,7 @@ We moved on to looking to alter our columns to see if we can increase our scores
 
 As seen we have made continuous improvements to the model and hope to have it above 70% accuracy with a recall rate of above 65% weighted avg by the end.
 
+### Tableau Dashboard
+
+https://public.tableau.com/app/profile/armando.molina/viz/FinalProject_16848673704810/Story1?publish=yes
+
