@@ -48,7 +48,7 @@ After getting the framework for a machine learning model into place, we tested 3
 | ------------- | ------------- 
 | <img src= "https://github.com/DAsInDavid1/Data_Bootcamp_Final/blob/main/Pictures/Logistical_Regression_Clasfication_Report.png" width=130% height=130%>  | <img src= "https://github.com/DAsInDavid1/Data_Bootcamp_Final/blob/main/Pictures/KNN_Classification_Report.png" width=100% height=100%>  
 
-As seen in the pictures above, the highest accuracy was the logistical regression, however it still had an extremely low recall rate for 1 (the patient will have a heart disease). The decision tree was better with still a high accuracy score, but the KNN Model had a better recall and accuracy score overall. We decided to move forward with this model and try to increase the quality of our machine learning model using other techniques.
+As seen in the pictures above, the highest accuracy was the logistical regression, however it still had an extremely low recall rate for 1 (the patient will have a heart disease). The decision tree was better with still a high accuracy score, but the KNN Model had a better recall and accuracy score overall. We decided to move forward with this model and try to increase the quality of our machine learning model using other techniques. It is to be noted that for KNN our k-neihgbors value was 1 to keep it simple for comparison. As noted on the IMB website for KNN "Lower values of k can have high variance, but low bias, and larger values of k may lead to high bias and lower variance". We will look to increase the k-neighbors value as it being one is to big of a variance (overfitting). 
 
 The first technique we looked into was SMOTEENN, which allowed us to oversample the 1's and then get rid of the outliers and any that overlapped with the 0's. This gave us a much more even analysis and kept it from being scewed to one side.
 
@@ -56,11 +56,21 @@ With SMOTEENN, our new accuracy score was lowered, however, we believe it was wo
 
 We moved on to looking to alter our columns to see if we can increase our scores by dropping certain columns. After testing of dropping individual columns, we found that by dropping the "heartrate" column we were able to increase our scores in every category. We tested dropping other columns with "heartrate" and found that "diabetes" also had a positive impact on our machine learning model once it was dropped.
 
-| KNN & SMOTEENN | Dropping "heartrate" | Dropping "heartrate" and "diabetes"
-| ------------- | ------------- | -------------
-| <img src= "https://github.com/DAsInDavid1/Data_Bootcamp_Final/blob/main/Pictures/KNN_Classification_Report_SMOTEENN.png" width=90% height=90%> | <img src= "https://github.com/DAsInDavid1/Data_Bootcamp_Final/blob/main/Pictures/KNN_Classification_Report_SMOTEENN_HeartRate.png" width=100% height=100%> | <img src= "https://github.com/DAsInDavid1/Data_Bootcamp_Final/blob/main/Pictures/KNN_Classification_Report_SMOTEENN_HeartRate_Diabetes.png" width=900% height=90%>
+After we exausted ways to alter our data to improve our sensitivity, we looked towards our k-neighbors value to see if we can improve our scores in a meaningful way. As seen in the picture below the best k-neighbor would be 2 (the formula rounds down so it says 1 is our best value with the least amount of error) however, by changing it to 2, our recall rate for 1's dramatically declines to .5 which is not what we were looking for. It is also a rule of thumb for K-neighbors to never be even numbers to avoid ties from happening. We then moved onto 3 since it was the and it gave us an increased recall rate for 1's with a slight decrease in accuracy. We believe that is worth the decrease in accuracy and will move forward wih K = 3.
 
-As seen we have made continuous improvements to the model and hope to have it above 70% accuracy with a recall rate of above 65% weighted avg by the end.
+<img src= "https://github.com/DAsInDavid1/Data_Bootcamp_Final/blob/Clean_Machine_Learning_Code/Pictures/Error-rate_KNN.png" width=50% height=50%> 
+
+| KNN & SMOTEENN | Dropping "heartrate" | Dropping "heartrate" and "diabetes" | K = 3
+| ------------- | ------------- | ------------- | -------------
+| <img src= "https://github.com/DAsInDavid1/Data_Bootcamp_Final/blob/main/Pictures/KNN_Classification_Report_SMOTEENN.png" width=90% height=90%> | <img src= "https://github.com/DAsInDavid1/Data_Bootcamp_Final/blob/main/Pictures/KNN_Classification_Report_SMOTEENN_HeartRate.png" width=100% height=100%> | <img src= "https://github.com/DAsInDavid1/Data_Bootcamp_Final/blob/main/Pictures/KNN_Classification_Report_SMOTEENN_HeartRate_Diabetes.png" width=90% height=90%> | <img src= "https://github.com/DAsInDavid1/Data_Bootcamp_Final/blob/Clean_Machine_Learning_Code/Pictures/KNN_Classification_Report_SMOTEENN_HeartRate_Diabetes_KNN%3D3.png" width=90% height=90%> 
+
+Our final Classification report and Confusion Matrix are below.
+
+<img src="https://github.com/DAsInDavid1/Data_Bootcamp_Final/blob/Clean_Machine_Learning_Code/Pictures/KNN_Classification_Report_SMOTEENN_HeartRate_Diabetes_KNN%3D3.png" width=50% height=50%> 
+
+<img src="https://github.com/DAsInDavid1/Data_Bootcamp_Final/blob/Clean_Machine_Learning_Code/Pictures/KNN_Confusion_Matrix.png" width=25% height=25%> 
+
+For this model to be improved, we would recomend either a yearly check up so we can see increases or decreses in the health of the patients and see if that helps us predict if they will have CHD in 10 years time.
 
 ### Tableau Dashboard
 
@@ -69,4 +79,13 @@ https://public.tableau.com/app/profile/armando.molina/viz/FinalProject_168486737
 ### Presentation
 
 https://docs.google.com/presentation/d/1yOMohdrSi0T8136BjUfX5RQ0WgP055Mjka2hBdSLjH8/edit?usp=sharing
+
+### Resources
+
+KNN Research Resources
+
+https://www.ibm.com/topics/knn - Basic KNN Knowledge
+
+https://towardsdatascience.com/how-to-find-the-optimal-value-of-k-in-knn-35d936e554eb - Forloop code for finding best K-neighbor number to use
+
 
