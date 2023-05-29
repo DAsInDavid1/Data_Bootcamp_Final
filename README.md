@@ -58,17 +58,17 @@ We moved on to looking to alter our columns to see if we can increase our scores
 
 After we exausted ways to alter our data to improve our sensitivity, we looked towards our k-neighbors value to see if we can improve our scores in a meaningful way. As seen in the picture below the best k-neighbor would be 2 (the formula rounds down so it says 1 is our best value with the least amount of error) however, by changing it to 2, our recall rate for 1's dramatically declines to .5 which is not what we were looking for. It is also a rule of thumb for K-neighbors to never be even numbers to avoid ties from happening. We then moved onto 3 since it was the and it gave us an increased recall rate for 1's with a slight decrease in accuracy. We believe that is worth the decrease in accuracy and will move forward wih K = 3.
 
-<img src= "https://github.com/DAsInDavid1/Data_Bootcamp_Final/blob/Clean_Machine_Learning_Code/Pictures/Error-rate_KNN.png" width=50% height=50%> 
+<img src= "https://github.com/DAsInDavid1/Data_Bootcamp_Final/blob/main/Pictures/Error-rate_KNN.png" width=50% height=50%> 
 
 | KNN & SMOTEENN | Dropping "heartrate" | Dropping "heartrate" and "diabetes" | K = 3
 | ------------- | ------------- | ------------- | -------------
-| <img src= "https://github.com/DAsInDavid1/Data_Bootcamp_Final/blob/main/Pictures/KNN_Classification_Report_SMOTEENN.png" width=90% height=90%> | <img src= "https://github.com/DAsInDavid1/Data_Bootcamp_Final/blob/main/Pictures/KNN_Classification_Report_SMOTEENN_HeartRate.png" width=100% height=100%> | <img src= "https://github.com/DAsInDavid1/Data_Bootcamp_Final/blob/main/Pictures/KNN_Classification_Report_SMOTEENN_HeartRate_Diabetes.png" width=90% height=90%> | <img src= "https://github.com/DAsInDavid1/Data_Bootcamp_Final/blob/Clean_Machine_Learning_Code/Pictures/KNN_Classification_Report_SMOTEENN_HeartRate_Diabetes_KNN%3D3.png" width=90% height=90%> 
+| <img src= "https://github.com/DAsInDavid1/Data_Bootcamp_Final/blob/main/Pictures/KNN_Classification_Report_SMOTEENN.png" width=90% height=90%> | <img src= "https://github.com/DAsInDavid1/Data_Bootcamp_Final/blob/main/Pictures/KNN_Classification_Report_SMOTEENN_HeartRate.png" width=100% height=100%> | <img src= "https://github.com/DAsInDavid1/Data_Bootcamp_Final/blob/main/Pictures/KNN_Classification_Report_SMOTEENN_HeartRate_Diabetes.png" width=90% height=90%> | <img src= "https://github.com/DAsInDavid1/Data_Bootcamp_Final/blob/main/Pictures/KNN_Classification_Report_SMOTEENN_HeartRate_Diabetes_KNN%3D3.png" width=90% height=90%> 
 
 Our final Classification report and Confusion Matrix are below.
 
-<img src="https://github.com/DAsInDavid1/Data_Bootcamp_Final/blob/Clean_Machine_Learning_Code/Pictures/KNN_Classification_Report_SMOTEENN_HeartRate_Diabetes_KNN%3D3.png" width=50% height=50%> 
+<img src="https://github.com/DAsInDavid1/Data_Bootcamp_Final/blob/main/Pictures/KNN_Classification_Report_SMOTEENN_HeartRate_Diabetes_KNN%3D3.png" width=50% height=50%> 
 
-<img src="https://github.com/DAsInDavid1/Data_Bootcamp_Final/blob/Clean_Machine_Learning_Code/Pictures/KNN_Confusion_Matrix.png" width=25% height=25%> 
+<img src="https://github.com/DAsInDavid1/Data_Bootcamp_Final/blob/main/Pictures/KNN_Confusion_Matrix.png" width=25% height=25%> 
 
 For this model to be improved, we would recomend either a yearly check up so we can see increases or decreses in the health of the patients and see if that helps us predict if they will have CHD in 10 years time.
 
