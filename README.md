@@ -20,7 +20,7 @@ Can demographic information such as age, gender, and health-related data such as
 To ensure effective communication within our team, we have established the following protocols. We will primarily use Slack for all day-to-day communications and updates related to the project. Additionally, we will hold weekly meetings on Sundays to discuss progress, address any issues, and plan for the upcoming week. During these meetings, we will review individual and collective goals and ensure everyone is on the same page. We believe that these communication protocols will help us stay organized, track our progress, and complete the project successfully.
 
 ### Data Exploration and Preparation
-We split the data into three tables. One containing categorical variables with characteristics of the patients (DEMOG), continuous measures (MEASURES), and categorical variables of medical history/symptoms (COMORBIDITIES). We started the data exploration with the DEMOG data. 53 rows (patients) of the 4240 rows in the raw data had BPMeds=NA and 50 rows had TotChol=NA. We dropped those rows from the analysis data, leaving 4138 rows for analysis. We decided not to use Education and Glucose in the analysis because of the large percentage of missing values. After dropping the rows with BMI or heartrate =NA, that left 4119 rows for analysis. The only other variable that needed to be addressed for missing data was cigsperday. For currentsmoker=1(Yes), we replaced 29 NAs with the mean value 18.
+We used a Postgres database hosted on AWS for our analysis. We created the original data table from one csv file downloaded from Kaggle. We then split the data into three tables. One containing categorical variables with characteristics of the patients (DEMOG), continuous measures (MEASURES), and categorical variables of medical history/symptoms (COMORBIDITIES). We started the data exploration with the DEMOG data. 53 rows (patients) of the 4240 rows in the raw data had BPMeds=NA and 50 rows had TotChol=NA. We dropped those rows from the analysis data, leaving 4138 rows for analysis. We decided not to use Education and Glucose in the analysis because of the large percentage of missing values. After dropping the rows with BMI or heartrate =NA, that left 4119 rows for analysis. The only other variable that needed to be addressed for missing data was cigsperday. For currentsmoker=1(Yes), we replaced 29 NAs with the mean value 18.
 
 ![ERD Schema](/Resources/ERD/ERD.png)
 
@@ -38,7 +38,7 @@ However, as seen with the confusion matrix we have a relatively high False Negat
 | <img src= "https://github.com/DAsInDavid1/Data_Bootcamp_Final/blob/main/Pictures/Confusion_Matrix_1.png" width=100% height=100%>   | <img src= "https://github.com/DAsInDavid1/Data_Bootcamp_Final/blob/main/Pictures/Classification_report_1.png" width=100% height=100%>   
 
 #### Secondary Phase, Choosing a Best Model
-After getting the framework for a machine learning model into place, we tested 3 more different models to see which one would give us the best base score we were looking for. The condition was a higher sensititivy score, along with a reasonable accuracy score of somewhere above 60%.
+After getting the framework for a machine learning model into place, we tested 3 more different models to see which one would give us the best base score we were looking for. The condition was a higher sensitivity score, along with a reasonable accuracy score of somewhere above 60%.
 
 | Gradient Boosting Classifier  | Decision Tree 
 | ------------- | -------------    
@@ -48,7 +48,7 @@ After getting the framework for a machine learning model into place, we tested 3
 | ------------- | ------------- 
 | <img src= "https://github.com/DAsInDavid1/Data_Bootcamp_Final/blob/main/Pictures/Logistical_Regression_Clasfication_Report.png" width=130% height=130%>  | <img src= "https://github.com/DAsInDavid1/Data_Bootcamp_Final/blob/main/Pictures/KNN_Classification_Report.png" width=100% height=100%>  
 
-As seen in the pictures above, the highest accuracy was the logistical regression, however it still had an extremely low recall rate for 1 (the patient will have a heart disease). The decision tree was better with still a high accuracy score, but the KNN Model had a better recall and accuracy score overall. We decided to move forward with this model and try to increase the quality of our machine learning model using other techniques. It is to be noted that for KNN our k-neihgbors value was 1 to keep it simple for comparison. As noted on the IMB website for KNN "Lower values of k can have high variance, but low bias, and larger values of k may lead to high bias and lower variance". We will look to increase the k-neighbors value as it being one is to big of a variance (overfitting). 
+As seen in the pictures above, the highest accuracy was the logistical regression, however it still had an extremely low recall rate for 1 (the patient will have a heart disease). The decision tree was better with still a high accuracy score, but the KNN Model had a better recall and accuracy score overall. We decided to move forward with this model and try to increase the quality of our machine learning model using other techniques. It is to be noted that for KNN our k-neihgbors value was 1 to keep it simple for comparison. As noted on the IMB website for KNN "Lower values of k can have high variance, but low bias, and larger values of k may lead to high bias and lower variance". We will look to increase the k-neighbors value as it being one is too big of a variance (overfitting). 
 
 The first technique we looked into was SMOTEENN, which allowed us to oversample the 1's and then get rid of the outliers and any that overlapped with the 0's. This gave us a much more even analysis and kept it from being scewed to one side.
 
@@ -68,13 +68,13 @@ After we exausted ways to alter our data to improve our sensitivity, we looked t
 | ------------- | -------------
 | <img src= "https://github.com/DAsInDavid1/Data_Bootcamp_Final/blob/main/Pictures/KNN_Classification_Report_SMOTEENN_HeartRate_Diabetes.png" width=90% height=90%> | <img src= "https://github.com/DAsInDavid1/Data_Bootcamp_Final/blob/main/Pictures/KNN_Classification_Report_SMOTEENN_HeartRate_Diabetes_KNN%3D9.png" width=90% height=90%> 
 
-Our final Classification report and Confusion Matrix are below.
+Our final Classification Report and Confusion Matrix are below.
 
 <img src="https://github.com/DAsInDavid1/Data_Bootcamp_Final/blob/main/Pictures/KNN_Classification_Report_SMOTEENN_HeartRate_Diabetes_KNN%3D9.png" width=50% height=50%> 
 
 <img src="https://github.com/DAsInDavid1/Data_Bootcamp_Final/blob/main/Pictures/KNN_Confusion_Matrix.png" width=25% height=25%> 
 
-For this model to be improved, we would recomend either a yearly check up so we can see increases or decreses in the health of the patients and see if that helps us predict if they will have CHD in 10 years time.
+For this model to be improved, we would recommend either a yearly check up so we can see increases or decreases in the health of the patients and see if that helps us predict if they will have CHD in 10 years time.
 
 ### Tableau Dashboard
 
