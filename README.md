@@ -60,9 +60,13 @@ After we exausted ways to alter our data to improve our sensitivity, we looked t
 
 <img src= "https://github.com/DAsInDavid1/Data_Bootcamp_Final/blob/main/Pictures/Error-rate_KNN.png" width=50% height=50%> 
 
-| KNN & SMOTEENN | Dropping "heartrate" | Dropping "heartrate" and "diabetes" | K = 9
-| ------------- | ------------- | ------------- | -------------
-| <img src= "https://github.com/DAsInDavid1/Data_Bootcamp_Final/blob/main/Pictures/KNN_Classification_Report_SMOTEENN.png" width=90% height=90%> | <img src= "https://github.com/DAsInDavid1/Data_Bootcamp_Final/blob/main/Pictures/KNN_Classification_Report_SMOTEENN_HeartRate.png" width=100% height=100%> | <img src= "https://github.com/DAsInDavid1/Data_Bootcamp_Final/blob/main/Pictures/KNN_Classification_Report_SMOTEENN_HeartRate_Diabetes.png" width=90% height=90%> | <img src= "https://github.com/DAsInDavid1/Data_Bootcamp_Final/blob/main/Pictures/KNN_Classification_Report_SMOTEENN_HeartRate_Diabetes_KNN%3D9.png" width=90% height=90%> 
+| KNN & SMOTEENN | Dropping "heartrate" 
+| ------------- | ------------- 
+| <img src= "https://github.com/DAsInDavid1/Data_Bootcamp_Final/blob/main/Pictures/KNN_Classification_Report_SMOTEENN.png" width=90% height=90%> | <img src= "https://github.com/DAsInDavid1/Data_Bootcamp_Final/blob/main/Pictures/KNN_Classification_Report_SMOTEENN_HeartRate.png" width=100% height=100%> 
+
+| Dropping "heartrate" and "diabetes" | K = 9
+| ------------- | -------------
+| <img src= "https://github.com/DAsInDavid1/Data_Bootcamp_Final/blob/main/Pictures/KNN_Classification_Report_SMOTEENN_HeartRate_Diabetes.png" width=90% height=90%> | <img src= "https://github.com/DAsInDavid1/Data_Bootcamp_Final/blob/main/Pictures/KNN_Classification_Report_SMOTEENN_HeartRate_Diabetes_KNN%3D9.png" width=90% height=90%> 
 
 Our final Classification report and Confusion Matrix are below.
 
