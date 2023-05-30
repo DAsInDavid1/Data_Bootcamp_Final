@@ -27,7 +27,7 @@ We used a Postgres database hosted on AWS for our analysis. We created the origi
 ### Machine Learning
 
 #### Initial Machine Learning Phase
-We are using a basic gradient boosting classifer method to see which learning rate we can expect the best results from. As seen in the picture below, we have the highes validation accuracy score at 0.1 learning rate. Even though the higher training levels have a higher training accuracry score, it is getting to seperated from the validation accuracy score. This is most likely caused by over fitting and we have decided to go with 0.1 since it has the closest training and validation accuracy scores, implying that this learning rate is not overfitted.
+We are using a basic gradient boosting classifer method to see which learning rate we can expect the best results from. As seen in the picture below, we have the highest validation accuracy score at 0.1 learning rate. Even though the higher training levels have a higher training accuracy score, it is getting too separated from the validation accuracy score. This is most likely caused by over fitting and we have decided to go with 0.1 since it has the closest training and validation accuracy scores, implying that this learning rate is not overfitted.
 
 <img src= "https://github.com/DAsInDavid1/Data_Bootcamp_Final/blob/main/Pictures/Learning_rates.png" width=25% height=25%> 
 
