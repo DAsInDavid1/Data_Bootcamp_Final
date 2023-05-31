@@ -78,7 +78,7 @@ For this model to be improved, we would recommend either a yearly check up so we
 
 ### Tableau Dashboard
 
-https://public.tableau.com/app/profile/armando.molina/viz/FinalProject_16848673704810/Dashboard2?publish=yes
+https://public.tableau.com/app/profile/armando.molina/viz/FinalProject_16848673704810/Dashboard3?publish=yes
 
 ### Presentation
 
