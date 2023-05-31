@@ -86,10 +86,14 @@ https://docs.google.com/presentation/d/1yOMohdrSi0T8136BjUfX5RQ0WgP055Mjka2hBdSL
 
 ### Resources
 
+Data Set - https://www.kaggle.com/datasets/mohannapd/ramingham-heart-study
+
 KNN Research Resources
 
 https://www.ibm.com/topics/knn - Basic KNN Knowledge
 
 https://towardsdatascience.com/how-to-find-the-optimal-value-of-k-in-knn-35d936e554eb - Forloop code for finding best K-neighbor number to use
+
+
 
 
