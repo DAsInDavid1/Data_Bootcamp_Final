@@ -33,14 +33,14 @@ We are using a basic gradient boosting classifer method to see which learning ra
 
 However, as seen with the confusion matrix we have a relatively high False Negatives causing us to have a low recall (sensitivity) rate. And when concerning coronary heart disease, it is extremely important to have a good sensitivity rate. We will need to look into raising our sensitivity rate to an acceptable standard.
 
-| Confusion Matrix  | Classification Report 
+| Confusion Matrix | Classification Report 
 | ------------- | ------------- 
 | <img src= "https://github.com/DAsInDavid1/Data_Bootcamp_Final/blob/main/Pictures/Confusion_Matrix_1.png" width=100% height=100%>   | <img src= "https://github.com/DAsInDavid1/Data_Bootcamp_Final/blob/main/Pictures/Classification_report_1.png" width=100% height=100%>   
 
 #### Secondary Phase, Choosing a Best Model
 After getting the framework for a machine learning model into place, we tested 3 more different models to see which one would give us the best base score we were looking for. The condition was a higher sensitivity score, along with a reasonable accuracy score of somewhere above 60%.
 
-| Gradient Boosting Classifier  | Decision Tree 
+| Gradient Boosting Classifier | Decision Tree 
 | ------------- | -------------    
 | <img src= "https://github.com/DAsInDavid1/Data_Bootcamp_Final/blob/main/Pictures/Classification_report_1.png" width=120% height=120%>   | <img src= "https://github.com/DAsInDavid1/Data_Bootcamp_Final/blob/main/Pictures/Decision_Tree_Clasfication_Report.png" width=100% height=100%>    
 
@@ -88,7 +88,7 @@ https://docs.google.com/presentation/d/1yOMohdrSi0T8136BjUfX5RQ0WgP055Mjka2hBdSL
 
 Data Set - https://www.kaggle.com/datasets/mohannapd/ramingham-heart-study
 
-KNN Research Resources
+### KNN Research Resources
 
 https://www.ibm.com/topics/knn - Basic KNN Knowledge
 
