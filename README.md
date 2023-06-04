@@ -74,7 +74,7 @@ Our final Classification Report and Confusion Matrix are below.
 
 <img src="https://github.com/DAsInDavid1/Data_Bootcamp_Final/blob/main/Pictures/KNN_Confusion_Matrix.png" width=25% height=25%> 
 
-For this model to be improved, we would recommend either a yearly check up so we can see increases or decreases in the health of the patients and see if that helps us predict if they will have CHD in 10 years time.
+For this model to be improved, we would recommend either a yearly check up so we can see increases or decreases in the health of the patients and see if that helps us predict if they will have CHD in 10 years' time.
 
 ### Tableau Dashboard
 
@@ -93,7 +93,4 @@ Data Set - https://www.kaggle.com/datasets/mohannapd/ramingham-heart-study
 https://www.ibm.com/topics/knn - Basic KNN Knowledge
 
 https://towardsdatascience.com/how-to-find-the-optimal-value-of-k-in-knn-35d936e554eb - Forloop code for finding best K-neighbor number to use
-
-
-
 
